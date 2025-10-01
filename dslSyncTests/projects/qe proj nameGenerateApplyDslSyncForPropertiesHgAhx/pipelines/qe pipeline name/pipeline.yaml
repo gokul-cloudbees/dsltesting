@@ -3,6 +3,7 @@ apiVersion: cloudbees.com/v2025.12
 kind: pipeline
 metadata:
   name: qe pipeline name
+  description: Automation backend tests
 spec:
   formalParameters:
     - name: ec_stagesToRun
