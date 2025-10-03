@@ -1,0 +1,44 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: process
+metadata:
+  name: application process
+spec:
+  exclusiveEnvironment: false
+  processType: DEPLOY
+  formalParameters:
+    - name: ec_qe microservice name-run
+      defaultValue: "1"
+      expansionDeferred: true
+      type: checkbox
+  processSteps:
+    - name: qe step 1
+      processStepType: process
+      submicroservice: qe microservice name
+      submicroserviceProcess: microservice process
+      useUtilityResource: true
+      properties:
+        - name: ec_deploy
+          properties:
+            - name: ec_notifierStatus
+              value: "0"
+    - name: qe step 2
+      processStepType: process
+      submicroservice: qe microservice name
+      submicroserviceProcess: microservice process
+      useUtilityResource: true
+      properties:
+        - name: ec_deploy
+          properties:
+            - name: ec_notifierStatus
+              value: "0"
+    - name: qe step 3
+      processStepType: process
+      submicroservice: qe microservice name
+      submicroserviceProcess: microservice process
+      useUtilityResource: true
+      properties:
+        - name: ec_deploy
+          properties:
+            - name: ec_notifierStatus
+              value: "0"
