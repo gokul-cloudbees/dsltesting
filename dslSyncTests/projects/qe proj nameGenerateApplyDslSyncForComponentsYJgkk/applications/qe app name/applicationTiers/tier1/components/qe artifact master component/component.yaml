@@ -1,0 +1,12 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: component
+metadata:
+  name: qe artifact master component
+spec:
+  actualParameters:
+    - art_name: "$[art_name]"
+    - art_version: "$[art_version]"
+  reference: true
+  sourceComponentName: qe artifact master component
+  sourceProjectName: qe proj nameGenerateApplyDslSyncForComponentsYJgkk

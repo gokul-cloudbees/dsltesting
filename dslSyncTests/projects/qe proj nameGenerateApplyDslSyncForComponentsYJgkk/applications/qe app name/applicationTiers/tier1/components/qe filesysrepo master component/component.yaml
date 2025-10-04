@@ -1,0 +1,9 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: component
+metadata:
+  name: qe filesysrepo master component
+spec:
+  reference: true
+  sourceComponentName: qe filesysrepo master component
+  sourceProjectName: qe proj nameGenerateApplyDslSyncForComponentsYJgkk
