@@ -1,0 +1,7 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: application
+metadata:
+  name: qe app name
+spec:
+  applicationType: microservice

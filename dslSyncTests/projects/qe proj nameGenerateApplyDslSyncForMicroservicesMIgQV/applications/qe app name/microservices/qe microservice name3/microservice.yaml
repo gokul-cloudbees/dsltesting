@@ -1,0 +1,14 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: microservice
+metadata:
+  name: qe microservice name3
+spec:
+  definitionSource: yaml_content
+  definitionSourceParameters:
+    - sourceType: path
+    - yamlPath: test
+  definitionType: yaml
+  deployParameters:
+    - additionalOptions: ""
+    - relativePath: ""
