@@ -1,0 +1,7 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: component
+metadata:
+  name: qe maven app component
+spec:
+  pluginKey: EC-Maven

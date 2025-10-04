@@ -1,0 +1,9 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: component
+metadata:
+  name: qe utilities master component
+spec:
+  reference: true
+  sourceComponentName: qe utilities master component
+  sourceProjectName: qe proj nameGenerateApplyDslSyncForComponentshzEHG

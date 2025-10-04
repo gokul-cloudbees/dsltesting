@@ -1,0 +1,7 @@
+apiVersion: cloudbees.com/v2025.12
+kind: property
+metadata:
+  name: version
+spec:
+  value: "{% cb_include_as_yaml_comment '../version.txt' %}"
+  propertyType: string
