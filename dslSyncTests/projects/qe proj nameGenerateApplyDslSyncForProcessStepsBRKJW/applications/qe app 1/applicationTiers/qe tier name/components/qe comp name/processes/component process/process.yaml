@@ -3,6 +3,7 @@ apiVersion: cloudbees.com/v2025.12
 kind: process
 metadata:
   name: component process
+  description: Automation backend tests
 spec:
   processType: DEPLOY
   processSteps:

@@ -3,6 +3,7 @@ apiVersion: cloudbees.com/v2025.12
 kind: process
 metadata:
   name: microservice process
+  description: Automation backend tests
 spec:
   processType: DEPLOY
   timeLimitUnits: seconds
