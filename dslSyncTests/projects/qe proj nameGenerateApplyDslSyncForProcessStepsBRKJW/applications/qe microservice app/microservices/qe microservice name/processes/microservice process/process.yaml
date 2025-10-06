@@ -1,0 +1,40 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: process
+metadata:
+  name: microservice process
+spec:
+  processType: DEPLOY
+  timeLimitUnits: seconds
+  processSteps:
+    - name: Retrieve Artifact
+      description: System generated step to retrieve microservice definition artifact
+      processStepType: plugin
+      subprocedure: Source Provider
+      subproject: /plugins/EC-Helm/project
+    - name: Deploy Microservice
+      description: System generated step to deploy microservice
+      processStepType: plugin
+      subprocedure: Deploy Service
+      subproject: /plugins/EC-Helm/project
+    - name: qe step 1
+      actualParameters:
+        - commandToRun: "{% cb_include_as_yaml_comment 'processSteps/qe step 1.cmd' %}"
+      processStepType: command
+      subprocedure: RunCommand
+      subproject: /plugins/EC-Core/project
+    - name: qe step 2
+      actualParameters:
+        - commandToRun: "{% cb_include_as_yaml_comment 'processSteps/qe step 2.cmd' %}"
+      processStepType: command
+      subprocedure: RunCommand
+      subproject: /plugins/EC-Core/project
+    - name: qe step 3
+      actualParameters:
+        - commandToRun: "{% cb_include_as_yaml_comment 'processSteps/qe step 3.cmd' %}"
+      processStepType: command
+      subprocedure: RunCommand
+      subproject: /plugins/EC-Core/project
+  processDependencies:
+    - processStepName: Retrieve Artifact
+      targetProcessStepName: Deploy Microservice
