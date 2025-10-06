@@ -1,0 +1,39 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: process
+metadata:
+  name: qe proc name 2
+spec:
+  processType: OTHER
+  formalParameters:
+    - name: p1
+      orderIndex: 1
+      required: true
+      type: entry
+    - name: p2
+      checkedValue: "true"
+      orderIndex: 2
+      type: checkbox
+      uncheckedValue: "false"
+    - name: p3
+      orderIndex: 3
+      required: true
+      type: credential
+    - name: ec_enforceDependencies
+      defaultValue: "0"
+      expansionDeferred: true
+      type: checkbox
+  processSteps:
+    - name: s1
+      actualParameters:
+        - commandToRun: "{% cb_include_as_yaml_comment 'processSteps/s1.cmd' %}"
+      applicationTierName: Tier 1
+      dependencyJoinType: and
+      processStepType: command
+      subprocedure: RunCommand
+      subproject: /plugins/EC-Core/project
+      properties:
+        - name: ec_deploy
+          properties:
+            - name: ec_notifierStatus
+              value: "0"

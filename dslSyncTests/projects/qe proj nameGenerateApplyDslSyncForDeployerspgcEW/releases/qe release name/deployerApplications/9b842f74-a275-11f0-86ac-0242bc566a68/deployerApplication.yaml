@@ -1,0 +1,27 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: deployerApplication
+metadata:
+  applicationName: qe app 1
+spec:
+  orderIndex: 1
+  processName: qe proc name 1
+  deployerConfigurations:
+    - name: qe app 1qe stage task 1qe stage 2
+      deployerTaskName: qe stage task 1
+      environmentName: "$[/myRelease/name]"
+      environmentTemplateName: qe env temp name
+      processName: qe proc name 1
+      stageName: qe stage 2
+    - name: qe app 1qe stage task 2qe stage 1
+      deployerTaskName: qe stage task 2
+      environmentName: qe env name
+      processName: qe proc name 1
+      rollingDeployEnabled: true
+      stageName: qe stage 1
+    - name: qe app 1qe stage task 2qe stage 2
+      deployerTaskName: qe stage task 2
+      environmentName: qe env name
+      environmentTemplateName: qe env temp name
+      processName: qe proc name 1
+      stageName: qe stage 2

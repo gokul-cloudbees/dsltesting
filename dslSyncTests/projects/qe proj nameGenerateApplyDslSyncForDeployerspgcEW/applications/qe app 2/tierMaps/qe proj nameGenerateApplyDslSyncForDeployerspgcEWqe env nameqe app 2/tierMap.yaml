@@ -1,0 +1,13 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: tierMap
+metadata:
+  name: qe proj nameGenerateApplyDslSyncForDeployerspgcEWqe env nameqe app 2
+  environmentName: qe env name
+  environmentProjectName: qe proj nameGenerateApplyDslSyncForDeployerspgcEW
+spec:
+  tierMappings:
+    - name: qe proj nameGenerateApplyDslSyncForDeployerspgcEWqe env nameqe app 2mapping
+      applicationTierName: Tier 1
+      environmentTierName: Tier 1
+      tierMapName: qe proj nameGenerateApplyDslSyncForDeployerspgcEWqe env nameqe app 2

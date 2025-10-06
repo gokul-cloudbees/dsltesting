@@ -1,0 +1,42 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: deployerApplication
+metadata:
+  applicationName: qe app 2
+spec:
+  orderIndex: 2
+  processName: qe proc name 1
+  deployerConfigurations:
+    - name: qe app 2qe stage task 1qe stage 1
+      deployerTaskName: qe stage task 1
+      environmentName: "$[/myRelease/name]"
+      environmentTemplateName: qe env temp name
+      processName: qe proc name 1
+      stageName: qe stage 1
+    - name: qe app 2qe stage task 1qe stage 2
+      actualParameters:
+        - p1: "1"
+        - p2: "true"
+        - p3: test_cred
+      deployerTaskName: qe stage task 1
+      environmentName: qe env name
+      processName: qe proc name 2
+      stageName: qe stage 2
+      attachedCredentials:
+        - credentialName: /projects/qe proj nameGenerateApplyDslSyncForDeployerspgcEW/credentials/test_cred
+    - name: qe app 2qe stage task 2qe stage 1
+      actualParameters:
+        - p1: "1"
+        - p2: "true"
+        - p3: test_cred
+      deployerTaskName: qe stage task 2
+      environmentName: qe env name
+      processName: qe proc name 2
+      stageName: qe stage 1
+      attachedCredentials:
+        - credentialName: /projects/qe proj nameGenerateApplyDslSyncForDeployerspgcEW/credentials/test_cred
+    - name: qe app 2qe stage task 2qe stage 2
+      deployerTaskName: qe stage task 2
+      processName: qe proc name 1
+      skipDeploy: true
+      stageName: qe stage 2

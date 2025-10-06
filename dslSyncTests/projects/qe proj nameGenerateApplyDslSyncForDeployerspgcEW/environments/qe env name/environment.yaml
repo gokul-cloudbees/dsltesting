@@ -1,0 +1,20 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: environment
+metadata:
+  name: qe env name
+spec:
+  rollingDeployEnabled: true
+  rollingDeployType: phase
+  rollingDeployPhases:
+    - name: qe phase 1
+      orderIndex: 1
+    - name: qe phase 2
+      orderIndex: 2
+      rollingDeployPhaseType: untagged
+  environmentTiers:
+    - name: Tier 1
+      resourceNames:
+        - resGenerateApplyDslSyncForDeployersSDMqn
+      resourcePhaseMappings:
+        - resGenerateApplyDslSyncForDeployersSDMqn: qe phase 1
