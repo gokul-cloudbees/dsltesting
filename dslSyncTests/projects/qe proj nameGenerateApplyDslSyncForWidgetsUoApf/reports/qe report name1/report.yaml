@@ -1,0 +1,11 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: report
+metadata:
+  name: qe report name1
+  description: Automation backend tests
+spec:
+  parameters: test
+  reportObjectTypeForSourceType: release
+  reportObjectTypeName: release
+  title: test

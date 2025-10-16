@@ -1,0 +1,8 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: widget
+metadata:
+  name: qe_widget_name1
+spec:
+  column: qe dashboard column1
+  orderIndex: 1
