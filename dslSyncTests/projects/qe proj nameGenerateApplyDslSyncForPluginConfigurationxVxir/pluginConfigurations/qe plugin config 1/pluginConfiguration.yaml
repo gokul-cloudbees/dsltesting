@@ -3,5 +3,11 @@ apiVersion: cloudbees.com/v2025.12
 kind: pluginConfiguration
 metadata:
   name: qe plugin config 1
+  description: Automation backend tests
 spec:
+  credentialReferenceParameters:
+    - credential: /projects/qe proj nameGenerateApplyDslSyncForPluginConfigurationxVxir/credentials/test_cred
+  fields:
+    - authType: test
+    - library: test
   pluginKey: EC-Git
