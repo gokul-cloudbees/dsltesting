@@ -1,0 +1,9 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: dashboard
+metadata:
+  name: qe dashboard name
+spec:
+  type: COMMAND_CENTER
+  columns:
+    - qe dashboard column1
