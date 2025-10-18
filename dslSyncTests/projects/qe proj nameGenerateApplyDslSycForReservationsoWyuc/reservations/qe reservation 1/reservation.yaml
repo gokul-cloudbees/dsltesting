@@ -1,0 +1,13 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: reservation
+metadata:
+  name: qe reservation 1
+spec:
+  beginDate: 2025-10-18T16:17
+  endDate: 2025-10-18T16:18
+  environmentName: qe env name
+  reserverName: qe app name
+  reserverProjectName: qe proj nameGenerateApplyDslSycForReservationsoWyuc
+  reserverType: application
+  timeZone: Asia/Calcutta
