@@ -1,0 +1,12 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: process
+metadata:
+  name: qe proc name 1
+spec:
+  processType: OTHER
+  formalParameters:
+    - name: ec_enforceDependencies
+      defaultValue: "0"
+      expansionDeferred: true
+      type: checkbox

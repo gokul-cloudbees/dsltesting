@@ -1,0 +1,14 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: deployerApplication
+metadata:
+  applicationName: qe app 2
+spec:
+  afterLastRetry: continueOnError
+  enforceDependencies: true
+  errorHandling: retryOnError
+  orderIndex: 2
+  processName: qe proc name 1
+  retryCount: "3"
+  retryInterval: "60"
+  retryType: auto

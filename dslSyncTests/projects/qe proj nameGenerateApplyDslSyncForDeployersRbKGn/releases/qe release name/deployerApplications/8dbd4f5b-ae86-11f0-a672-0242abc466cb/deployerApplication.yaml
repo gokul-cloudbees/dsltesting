@@ -1,0 +1,15 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: deployerApplication
+metadata:
+  applicationName: qe app 1
+spec:
+  enforceDependencies: true
+  errorHandling: retryOnError
+  orderIndex: 1
+  processName: qe proc name 1
+  retryNotificationTemplate: ec_default_manual_retry_process_step_notification_template
+  retryType: manual
+  stageArtifacts: true
+  retryApprovers:
+    - "project: qe proj nameGenerateApplyDslSyncForDeployersRbKGn"

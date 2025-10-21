@@ -1,0 +1,8 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: deployerApplication
+metadata:
+  applicationName: qe app 3
+spec:
+  orderIndex: 3
+  processName: qe proc name 1
