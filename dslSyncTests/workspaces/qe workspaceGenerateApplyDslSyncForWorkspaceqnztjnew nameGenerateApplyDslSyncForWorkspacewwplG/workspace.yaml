@@ -1,0 +1,7 @@
+---
+apiVersion: cloudbees.com/v2025.12
+kind: workspace
+metadata:
+  name: qe workspaceGenerateApplyDslSyncForWorkspaceqnztjnew nameGenerateApplyDslSyncForWorkspacewwplG
+spec:
+  zoneName: default
